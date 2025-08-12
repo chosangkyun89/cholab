@@ -1,0 +1,95 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "static/uploads"
+public_folder: "/uploads"
+
+collections:
+  # Pages / Admin Section
+  - name: "admin"
+    label: "Admin"
+    folder: "content/admin"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # Authors
+  - name: "authors"
+    label: "Authors"
+    folder: "content/authors"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Name", name: "title", widget: "string" }
+      - { label: "Avatar", name: "avatar", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # Contact
+  - name: "contact"
+    label: "Contact"
+    folder: "content/contact"
+    create: false
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # Events
+  - name: "event"
+    label: "Events"
+    folder: "content/event"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "featured", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # People
+  - name: "people"
+    label: "People"
+    folder: "content/people"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Name", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # Blog Posts
+  - name: "post"
+    label: "Posts"
+    folder: "content/post"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "featured", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # Publications
+  - name: "publication"
+    label: "Publications"
+    folder: "content/publication"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Citation File", name: "cite", widget: "file", required: false }
+      - { label: "Featured Image", name: "featured", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # Tour
+  - name: "tour"
+    label: "Tour"
+    folder: "content/tour"
+    create: false
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
